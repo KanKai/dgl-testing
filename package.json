@@ -38,11 +38,6 @@
     "fs-extra": "^8.1.0",
     "glob": "^7.1.4"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.js": [
       "eslint",

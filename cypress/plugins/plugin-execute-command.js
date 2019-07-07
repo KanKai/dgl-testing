@@ -1,4 +1,4 @@
-const { cypressConfigResolver } = require('../config/cypress-config-resolver');
+const { cypressConfigResolver } = require("../config/cypress-config-resolver");
 
 const pluginExecuteCommand = command => {
   return new Promise((resolve, reject) => {
