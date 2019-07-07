@@ -1,7 +1,11 @@
 {
+    "baseUrl": "https://dgl-acct-dev.addtechhub.com",
+    "ignoreTestFiles": ["*.js", "*.md"],
+    "reporter": "junit",
     "video": true,
+    "reporterOptions": {
+        "mochaFile": "test-results/test-output-[hash].xml"
+    },
     "screenshotsFolder": "/Users/jeerawat_dev/Developments/DockerVolumes/cypress_report",
-    "baseUrl": "https://dgl-acct.addtechhub.com",
-    "ignoreTestFiles": "*.js",
     "chromeWebSecurity": false
 }

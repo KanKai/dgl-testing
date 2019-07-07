@@ -11,7 +11,27 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-const cucumber = require('cypress-cucumber-preprocessor').default
+const { cypressConfigResolver } = require('../config/cypress-config-resolver');
+const pluginExecuteCommand = require('./plugin-execute-command');
+const cucumber = require('cypress-cucumber-preprocessor').default;
+
 module.exports = (on, config) => {
-  on('file:preprocessor', cucumber())
-}
+  on("file:preprocessor", cucumber());
+  on('task', {
+    pluginExecuteCommand,
+  });
+  
+  on("before:browser:launch", (browser = {}, args) => {
+    if (browser.name === "chrome") {
+      args.push("--start-fullscreen");
+      args.push("--incognito");
+    }
+
+    if (browser.name === "electron") {
+      args["fullscreen"] = true;
+      return args;
+    }
+  });
+
+  return cypressConfigResolver();
+};

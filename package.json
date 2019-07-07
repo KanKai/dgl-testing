@@ -4,15 +4,49 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start:dev": "cypress open"
+    "cypress:open:local": "CYPRESS_ENV=localhost npm run cypress:open",
+    "cypress:open:prod": "CYPRESS_ENV=production npm run cypress:open",
+    "cypress:open": "cypress open",
+    "test:local": "CYPRESS_ENV=localhost npm run test",
+    "test:prod": "CYPRESS_ENV=production npm run test",
+    "test": "cypress run --env TAGS='@e2e-test' --spec 'cypress/integration/**/*.feature'",
+    "test:debug:local": "CYPRESS_ENV=localhost npm run test:debug",
+    "test:debug:prod": "CYPRESS_ENV=production npm run test:debug",
+    "test:debug": "cypress run --headed --browser chrome --env TAGS='@e2e-test' --spec 'cypress/integration/**/*.feature'",
+    "test:pull-features": "git submodule update --remote gherkin-features && cp -rf gherkin-features/* cypress/integration && node ./scripts/remove-old-features.js"
   },
   "devDependencies": {
+    "@percy/cypress": "^1.0.9",
     "cypress": "^3.3.2",
-    "cypress-cucumber-preprocessor": "^1.12.0",
     "cypress-dark": "^1.7.13",
-    "cypress-xpath": "^1.4.0"
+    "cypress-file-upload": "^3.2.0",
+    "cypress-xpath": "^1.4.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.1.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cypress-cucumber-preprocessor": "^1.12.0",
+    "fs-extra": "^8.1.0",
+    "glob": "^7.1.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "git add"
+    ]
   }
 }
