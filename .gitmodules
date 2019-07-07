@@ -1,6 +1,0 @@
-# [submodule "dgl-testing-features"]
-#     path = dgl-testing-features
-#     url = git@github.com:KanKai/dgl-testing-features.git
-# [submodule "gherkin-features"]
-# 	path = gherkin-features
-# 	url = git@github.com:KanKai/dgl-testing-features.git
