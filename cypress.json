@@ -1,3 +1,7 @@
 {
-    "baseUrl": "http://localhost:4201"
+    "video": true,
+    "screenshotsFolder": "/Users/jeerawat_dev/Developments/DockerVolumes/cypress_report",
+    "baseUrl": "https://dgl-acct.addtechhub.com",
+    "ignoreTestFiles": "*.js",
+    "chromeWebSecurity": false
 }
