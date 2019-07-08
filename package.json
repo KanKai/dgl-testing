@@ -21,14 +21,18 @@
     "cypress": "^3.3.2",
     "cypress-dark": "^1.7.13",
     "cypress-file-upload": "^3.2.0",
+    "cypress-multi-reporters": "^1.1.22",
     "cypress-xpath": "^1.4.0",
     "eslint": "^6.0.1",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "faker": "^4.1.0",
     "husky": "^3.0.0",
-    "lint-staged": "^9.1.0"
+    "lint-staged": "^9.1.0",
+    "mocha": "^6.1.4",
+    "mocha-junit-reporter": "^1.23.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
