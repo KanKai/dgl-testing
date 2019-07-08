@@ -1,3 +1,4 @@
-[submodule "gherkin-features-bdd"]
-	path = gherkin-features-bdd
+
+[submodule "gherkin-features"]
+	path = gherkin-features
 	url = https://github.com/KanKai/dgl-testing-features.git
