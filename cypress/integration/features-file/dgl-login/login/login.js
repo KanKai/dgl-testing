@@ -1,5 +1,5 @@
 import { Given, When, And, Then } from 'cypress-cucumber-preprocessor/steps'
-import DGLLoginPage from '../../../pages/dgl-login-page'
+import DGLLoginPage from '../../../../pages/dgl-login-page'
 
 Given(/^I visit DGL Site$/, () => {
     DGLLoginPage.visit()
