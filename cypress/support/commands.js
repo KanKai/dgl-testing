@@ -26,7 +26,26 @@
 import "cypress-file-upload";
 import "@percy/cypress";
 
-Cypress.Commands.add("login", (email, password) => {
+Cypress.Commands.add("login", (email, password, visit = true) => {
+
+  if (visit) {
+    cy.clearLocalStorage()
+    cy.visit('/login')
+  }
+
+  cy.get("[class='font-title']").invoke('text').as('linkText')
+
+  cy.get("@linkText").then($x => {
+    expect($x).is.eql("เข้าสู่ระบบ");
+  });
+
+  cy.url().should("include", "/login");
+
   cy.get("#input-email").debug().type(email, { delay: 100 });
   cy.get("#input-password").debug().type(password, { log: false, delay: 100 });
+
+  cy.get(".mat-checkbox-inner-container").click();
+
+  cy.get('#btn-submit-login').click()
+
 });

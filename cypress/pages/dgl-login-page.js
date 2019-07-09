@@ -11,7 +11,8 @@ class DGLLoginPage {
     }
 
     static performLogin(email, password) {
-        cy.login(email, password)        
+        cy.get("#input-email").debug().type(email, { delay: 100 });
+        cy.get("#input-password").debug().type(password, { log: false, delay: 100 });
     }
 
     static clickLoginButton() {

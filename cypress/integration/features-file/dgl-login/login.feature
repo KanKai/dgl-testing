@@ -3,7 +3,6 @@ Feature: DGL Login feature
    Scenario: Login with email feature
       Given I visit DGL Site
       When I perform login
-         |   email                     |   password    |
+         |   email                     |   password   |
          |   jeerawat@addtechhub.com   |   P@ssw0rd   |  
-      When Press Login
-      Then  I have some results
+      Then I have some results
