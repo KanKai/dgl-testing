@@ -1,0 +1,10 @@
+{
+    "create": {
+        "productgroup": "C00001",
+        "productunit": "N00004",
+        "nameTH": "ASUS Laptop",
+        "nameEN": "ASUS Laptop",
+        "unitprice": 29990,
+        "remark": "Test by Automation"
+    }
+}
