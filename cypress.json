@@ -6,6 +6,6 @@
     "reporterOptions": {
         "mochaFile": "test-results/test-output-[hash].xml"
     },
-    "screenshotsFolder": "/Users/jeerawat_dev/Developments/DockerVolumes/cypress_report",
+    "screenshotsFolder": "cypress/screenshots",
     "chromeWebSecurity": false
 }

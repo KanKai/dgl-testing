@@ -27,6 +27,6 @@ import "cypress-file-upload";
 import "@percy/cypress";
 
 Cypress.Commands.add("login", (email, password) => {
-  cy.get("#input-email").type(email, { delay: 100 });
-  cy.get("#input-password").type(password, { log: false, delay: 100 });
+  cy.get("#input-email").debug().type(email, { delay: 100 });
+  cy.get("#input-password").debug().type(password, { log: false, delay: 100 });
 });

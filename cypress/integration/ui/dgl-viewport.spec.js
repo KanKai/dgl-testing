@@ -11,7 +11,7 @@ context('Test DGL viewport', () => {
     it('DGL set the viewport super large size', () => {
         cy.viewport(2999, 2999)
         cy.wait(200)
-        cy.screenshot(`${snapshotFolder}/large-size`)
+        //cy.screenshot(`${snapshotFolder}/large-size`)
     })
 
     it('DGL set the viewport macbook-15', () => {
