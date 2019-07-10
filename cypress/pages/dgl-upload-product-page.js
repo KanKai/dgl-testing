@@ -1,5 +1,4 @@
 /// <reference types="Cypress" />
-import faker from 'faker'
 
 class DGLUploadProduct {
     static gotoProductPage() {

@@ -24,7 +24,6 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 import "cypress-file-upload";
-import "@percy/cypress";
 
 Cypress.Commands.add("login", (email, password, visit = true) => {
 
